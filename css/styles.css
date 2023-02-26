@@ -1,0 +1,161 @@
+body {
+    background-color: black;
+}
+#caption {
+    display: flex;
+    justify-content: center;
+    font-family: "Apple SD Gothic Neo";
+    color: #00A97F;
+    font-size: 150px;
+}
+#search {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    border: 3px solid #00A97F;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
+    color: #00A97F;
+    background-color: transparent;
+}
+#vinyl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 200px;
+    padding-top: 15px;
+}
+#greenVinyl {
+    transition: transform 2s linear;
+    animation-duration: 2s;
+    animation-name: spinning;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes spinning {
+    to {
+        transform: rotate(360deg);
+    }
+}
+#greenVinyl:hover {
+    animation-play-state: paused;
+    cursor: url("../images/iconmonstr-disc-17.svg"),progress;
+}
+
+.searchBtnDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.btns {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    padding: 20px;
+}
+
+.btns {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 5px 5px;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+    margin: 16px;
+}
+
+.btns::after, .btns::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+}
+.btns:hover {
+    box-shadow: 0 0 10px #00A97F, 0 0 25px #00A97F, 0 0 50px #00A97F;
+}
+
+
+.btns::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btns:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btns:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btns:hover {
+    color: var(--color2);
+}
+
+.btns:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
+
+#todo-input {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    border: 3px solid #00A97F;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
+    color: #00A97F;
+    background-color: transparent;
+}
+ul {
+    color: #00A97F;
+    padding: 10px;
+    font-family: "Apple SD Gothic Neo";
+    text-align: center;
+}
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+#deleteButton {
+    background-color: transparent;
+    border: 1px solid #00A97F;
+    color: #00A97F;
+    margin-left: 10px;
+    transition: .2s ease-in-out;
+}
+#deleteButton:hover {
+    box-shadow: 0 0 10px #00A97F, 0 0 25px #00A97F, 0 0 50px #00A97F;
+}
+
